@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
+import ReactDOM from 'react-dom';
 import './index.css';
+import Feedback from './components/Feedback';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+ReactDOM.render(
+	<React.StrictMode>
+		<Feedback />
+	</React.StrictMode>,
+	document.getElementById('root'),
 );
