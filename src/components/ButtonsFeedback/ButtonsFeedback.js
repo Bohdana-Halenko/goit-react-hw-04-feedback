@@ -1,28 +1,26 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './ButtonsFeedback.module.css';
 
-const ButtonsFeedback = ({ options, onCountFeedback }) => (
-    <ul className={s.wrap}>
-        {options.map(option => (
-            <li key={option}>
-                <button
-                    className={s.button}
-                    type='button'
-                    name={option}
-                    onClick={() => onCountFeedback(option)}
-                >
-                    {option}
-                </button>
-            </li>
-        ))}
-    </ul>
-);
+function ButtonsFeedback({ options, onCountFeedback }) {
+    return options.map(option => (
+        <div className={s.wrap}>
+            <button
+                className={s.button}
+                type='button'
+                key={option}
+                onClick={onCountFeedback}
+            >
+                {option}
+            </button>
+        </div>
+        
+    ));
+}
 
 export default ButtonsFeedback;
 
 
 ButtonsFeedback.propTypes = {
-    options: propTypes.array,
-    option: propTypes.string,
-    onCountFeedback: propTypes.func,
+    options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    onCountFeedback: PropTypes.func.isRequired,
 };

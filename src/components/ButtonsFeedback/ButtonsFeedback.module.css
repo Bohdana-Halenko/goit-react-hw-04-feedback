@@ -6,7 +6,7 @@ ul {
 .wrap {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 5px; 
 }
 .button {
   background-color: #6f4e37;
