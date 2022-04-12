@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from 'prop-types';
 import s from './ButtonsFeedback.module.css';
 
@@ -17,10 +18,9 @@ function ButtonsFeedback({ options, onCountFeedback }) {
     ));
 }
 
-export default ButtonsFeedback;
-
-
 ButtonsFeedback.propTypes = {
-    options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    onCountFeedback: PropTypes.func.isRequired,
+    options: PropTypes.arrayOf(PropTypes.shape),
+    onCountFeedback: PropTypes.func,
 };
+
+export default ButtonsFeedback;

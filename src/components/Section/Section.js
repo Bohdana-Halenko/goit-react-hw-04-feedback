@@ -1,4 +1,5 @@
-import propTypes from 'prop-types';
+import React from "react";
+import PropTypes from 'prop-types';
 import s from './Section.module.css';
 
 
@@ -8,12 +9,12 @@ function Section({ title, children }) {
 			<h2 className={s.feedbackSection}>{title}</h2>
 			{children}
 		</>
-	);
-}
-
-export default Section;
-
+	)
+};
 
 Section.propTypes = {
-    title: propTypes.string.isRequired,
-};
+	title: PropTypes.string,
+	children: PropTypes.node.isRequired,
+	};
+
+export default Section;

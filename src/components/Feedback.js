@@ -4,6 +4,7 @@ import ButtonsFeedback from './ButtonsFeedback/ButtonsFeedback';
 import Notification from './Notification/Notification';
 import Statistic from './Statistic/Statistic';
 import './Feedback.module.css';
+import PropTypes from 'prop-types';
 
 
 export default function Feedback() {
@@ -63,5 +64,11 @@ export default function Feedback() {
                 )}           
             </Section>
         </section>
-    );
-}
+    )
+};
+
+Feedback.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,    
+};
